@@ -8,10 +8,13 @@ using namespace std;
 int main()
 {
     A objectA;
-    objectA.setValue(11123);
     B objectB(objectA);
+
+    objectA.setValue(345);
+    objectB.setValueFromObjectA();
     cout<<objectB.getValue()<<endl;
-    objectA.setValue(23);
+    objectA.setValue(123);
+    objectB.setValueFromObjectA();
     cout<<objectB.getValue()<<endl;
 
     return 0;

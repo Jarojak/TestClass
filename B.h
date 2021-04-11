@@ -6,15 +6,16 @@
 class B
 {
     int value;
-
+    A objectA;
 public:
     B(A & otherA)
+    : objectA(otherA)
     {
-        value = otherA.getValue();
     }
 
     void setValue(int newValue);
     int getValue();
+    void setValueFromObjectA();
 };
 
 #endif
